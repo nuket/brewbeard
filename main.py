@@ -1,15 +1,13 @@
 #!/usr/bin/env python
 
+from config import SENSOR_MAPPING, RELAY_MAPPING
+
 from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/get/data')
 def index():
     return render_template('index.html')
-
-
-SENSOR_MAPPING = {
-}
 
 class RealWorldData:
     def __init__(self):
